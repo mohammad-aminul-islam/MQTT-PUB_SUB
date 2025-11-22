@@ -1,5 +1,5 @@
 ﻿using MQTT.Demo;
 
 
-await new MQTTSubscriber().ConnectAsync();
+ new MQTTSubscriber().ConnectAsync();
 Console.ReadLine();
