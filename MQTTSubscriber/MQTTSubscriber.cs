@@ -16,7 +16,10 @@ namespace MQTT.Demo
                 _client = factory.CreateMqttClient();
 
                 var options = new MqttClientOptionsBuilder()
-                    .WithTcpServer("localhost", 1883)   // Mosquitto broker
+                    .WithWebSocketServer(config =>
+                    {
+                        config.WithUri("ws://localhost:9001");
+                    })   // Mosquitto broker
                     .WithClientId("BackendSubscriber")
                     .WithCleanSession(false)
                     .Build();

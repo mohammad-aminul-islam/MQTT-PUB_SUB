@@ -1,0 +1,6 @@
+@MQTT.AuthService_HostAddress = http://localhost:5223
+
+GET {{MQTT.AuthService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
